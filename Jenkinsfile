@@ -27,7 +27,6 @@ pipeline {
         stage('Tests') {
             steps {
                 script {
-                    // Exécute les tests
                     sh 'mvn test'
                 }
             }
@@ -54,7 +53,8 @@ pipeline {
             echo 'Le pipeline a réussi!'
         }
         failure {
-            echo 'Le pipeline a échoué!'
+                echo 'Le pipeline a échoué!'
+            }
         }
     }
 }
